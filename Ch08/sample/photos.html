@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from photos.fla</title>
+
+<script src="libs/easeljs-0.4.2.min.js"></script>
+<script src="libs/tweenjs-0.2.0.min.js"></script>
+<script src="libs/movieclip-0.4.1.min.js"></script>
+<script src="libs/preloadjs-0.1.0.min.js"></script>
+<script src="photos.js"></script>
+
+<script>
+var canvas, stage, exportRoot, images;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = {};
+
+	var manifest = [
+		{src:"images/_07.jpg", id:"_07"},
+		{src:"images/_06.jpg", id:"_06"},
+		{src:"images/_05.jpg", id:"_05"},
+		{src:"images/_04.jpg", id:"_04"},
+		{src:"images/_03.jpg", id:"_03"},
+		{src:"images/_02.jpg", id:"_02"},
+		{src:"images/_01.jpg", id:"_01"},
+		{src:"images/photo.png", id:"photo"}
+	];
+
+	var loader = new PreloadJS(false);
+	loader.onFileLoad = handleFileLoad;
+	loader.onComplete = handleComplete;
+	loader.loadManifest(manifest);
+}
+
+function handleFileLoad(o) {
+	if (o.type == "image") { images[o.id] = o.result; }
+}
+
+function handleComplete() {
+	exportRoot = new lib.photos();
+
+	stage = new Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	Ticker.setFPS(3);
+	Ticker.addListener(stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="330" height="280" style="background-color:#ffffff"></canvas>
+</body>
+</html>
