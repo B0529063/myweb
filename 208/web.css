@@ -1,0 +1,70 @@
+@charset "utf-8";
+#header {
+	background-image: url(images/header.png);
+	height: 49px;
+	width: 766px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#main {
+	background-image: url(images/main.png);
+	width: 766px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#fooder {
+	background-image: url(images/footer.png);
+	height: 68px;
+	width: 766px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#mainL {
+	float: left;
+	width: 173px;
+	margin-right: 7px;
+	margin-left: 23px;
+}
+#mainR {
+	width: 537px;
+	margin-left: 203px;
+}
+#fooder {
+	width: 766px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#banner {
+	margin-bottom: 5px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+li a {
+	line-height: 25px;
+	color: #fff;
+	text-decoration: none;
+	background-image: url(images/button.png);
+	background-position: top;
+	text-indent: 30px;
+	display: block;
+	height: 25px;
+	width: 173px;
+}
+li a:hover {
+	color: #666;
+	background-image: url(images/button.png);
+	background-position: bottom;
+}
+body {
+	font-family: "微軟正黑體", "標楷體", "新細明體";
+	font-size: 14px;
+	color: #666;
+	background-image: url(images/bg.png);
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
