@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:spry="http://ns.adobe.com/spry">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PhotoTour 旅遊攝影網 :: 歡迎愛旅遊愛攝影的你 ::</title>
+<link href="website.css" rel="stylesheet" type="text/css" media="all" />
+<script src="ch-SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+<script src="ch-SpryAssets/SpryData.js" type="text/javascript"></script>
+<script src="ch-SpryAssets/SpryHTMLDataSet.js" type="text/javascript"></script>
+<link href="ch-SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+<!--
+var Taiwan = new Spry.Data.HTMLDataSet("ch12-02.html", "tourTaiwan", {firstRowAsHeaders: false, useColumnsAsRows: true, columnNames: ['name', 'photo1', 'photo2', 'info', 'date', 'time', 'from', 'scene']});
+var Oversea = new Spry.Data.HTMLDataSet("ch12-02.html", "tourOversea", {firstRowAsHeaders: false, useColumnsAsRows: true, columnNames: ['name', 'photo1', 'photo2', 'info', 'date', 'time', 'from', 'scene']});
+//-->
+</script>
+</head>
+<body>
+<div id="bgzone">
+  <div id="header"><a href="index.html"><img src="images/logo.gif" alt="PhotoTour 旅遊攝影網" width="336" height="80" id="logo" /></a><img src="images/banner.gif" alt="Banner" width="468" height="60" id="banner" /></div>
+  <div id="mainContent">
+    <div id="sideR">
+      <ul id="menu">
+        <li class="about"><a href="about.html"><span>ABOUT US</span></a></li>
+        <li class="photo"><a href="photo.html"><span>PORTFOLIO</span></a></li>
+        <li class="dl"><a href="dl.html"><span>DOWNLOAD</span></a></li>
+      </ul>
+      <div class="right_title">團友攝影成果精選特輯</div>
+      <div id="photozone"><img src="images/photo_pickup.gif" width="215" height="140" alt="團友精選照片" />
+        <p>在專業攝影團隊的指導與帶領下，加上愉悅放鬆的旅遊氣氛，團友們拍出的照片格外令人驚艷與感動，在經過照片所屬團友的同意下，我們特別選出優秀的作品讓大家欣賞，也歡迎愛攝影愛旅遊的你，參加我們所舉辦的攝影旅遊活動。</p>
+      </div>
+    </div>
+    <div id="sideL">
+      <div id="TabbedPanels1" class="TabbedPanels">
+        <ul class="TabbedPanelsTabGroup">
+          <li class="TabbedPanelsTab" tabindex="0">國內旅遊攝影團</li>
+          <li class="TabbedPanelsTab" tabindex="0">國外旅遊攝影團</li>
+        </ul>
+        <div class="TabbedPanelsContentGroup">
+          <div class="TabbedPanelsContent">
+            <table class="tourImageTable">
+              <tr>
+                <td><div spry:detailregion="Taiwan">{photo1}</div></td>
+                <td><div spry:detailregion="Taiwan">{photo2}</div></td>
+              </tr>
+            </table>
+            <img src="images/title1.gif" width="599" height="33" alt="國內旅遊攝影行程" />
+            <table class="tourTable">
+              <tr>
+                <td class="list"><div spry:region="Taiwan">
+                  <table class="tourListTable">
+                    <tr>
+                      <th spry:sort="name"><img src="images/list_title.gif" width="143" height="34" /></th>
+                    </tr>
+                    <tr spry:repeat="Taiwan" spry:setrow="Taiwan">
+                      <td><ul>
+                        <li><a href="javascript:;">{name}</a></li>
+                      </ul></td>
+                    </tr>
+                  </table>
+                </div></td>
+                <td><div spry:detailregion="Taiwan">{info}</div>
+                  <table class="tourDetailTable">
+                  <tr>
+                    <td class="title">出發日期</td>
+                    <td><div spry:detailregion="Taiwan">{date}</div></td>
+                  </tr>
+                  <tr>
+                    <td class="title">出發時間</td>
+                    <td><div spry:detailregion="Taiwan">{time}</div></td>
+                  </tr>
+                  <tr>
+                    <td class="title">集合地點</td>
+                    <td><div spry:detailregion="Taiwan">{from}</div></td>
+                  </tr>
+                  <tr>
+                    <td class="title">行程景點</td>
+                    <td><div spry:detailregion="Taiwan">{scene}</div></td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+          </div>
+          <div class="TabbedPanelsContent">
+            <table class="tourImageTable">
+              <tr>
+                <td><div spry:detailregion="Oversea">{photo1}</div></td>
+                <td><div spry:detailregion="Oversea">{photo2}</div></td>
+              </tr>
+            </table>
+            <img src="images/title2.gif" width="599" height="33" alt="國外旅遊攝影行程" /><br />
+            <table class="tourTable">
+              <tr>
+                <td class="list"><div spry:region="Oversea">
+                  <table class="tourListTable">
+                    <tr>
+                      <th spry:sort="name"><img src="images/list_title.gif" width="143" height="34" /></th>
+                    </tr>
+                    <tr spry:repeat="Oversea" spry:setrow="Oversea">
+                      <td><ul>
+                        <li><a href="javascript:;">{name}</a></li>
+                      </ul></td>
+                    </tr>
+                  </table>
+                </div></td>
+                <td><div spry:detailregion="Oversea">{info}</div>
+                  <table class="tourDetailTable">
+                    <tr>
+                      <td class="title">出發日期</td>
+                      <td><div spry:detailregion="Oversea">{date}</div></td>
+                    </tr>
+                    <tr>
+                      <td class="title">出發時間</td>
+                      <td><div spry:detailregion="Oversea">{time}</div></td>
+                    </tr>
+                    <tr>
+                      <td class="title">集合地點</td>
+                      <td><div spry:detailregion="Oversea">{from}</div></td>
+                    </tr>
+                    <tr>
+                      <td class="title">行程景點</td>
+                      <td><div spry:detailregion="Oversea">{scene}</div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">PhotoTour 攝影旅遊網　   100 台北市中正區杭州南路一段15-1號19樓　  TEL: 02-2396-3257<br />
+    Copyright  ©  PhotoTour. All rights reserved.</div>
+</div>
+<script type="text/javascript">
+<!--
+var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
+//-->
+</script>
+</body>
+</html>
